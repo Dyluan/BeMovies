@@ -3,22 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="app.js" defer></script>
-    <link rel="stylesheet" href="styles.css">
+    <title>BeMovies</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="header">
-        <div class="headerTitle">
-            <span class="be">BE</span>MOVIES
+    <!--This wil be the header of the body-->
+    <header>
+        <div class="header-cont">
+            <a id="logo" href="#"><span id="be-red">be</span>movies</a>
+            <nav>
+                <ul id="menu">
+                    <li><a href="#">SEARCH</a></li>
+                    <li><a href="#latest">LATEST</a></li>
+                    <li><a href="#genres">GENRES</a></li>
+                    <li><a href="#" id="open-register">REGISTER</a></li>
+                    <li><a href="#">SIGNIN</a></li>
+                </ul>
+            </nav>
         </div>
-        <div class="headerNav">
-            <a href="">Search</a>
-            <a href="">Latest</a>
-            <a href="">Genres</a>
-            <a href="">Register</a>
-            <a href="">Login</a>
+    </header>
+    <!--This is after the end of the header-->
+    <!--This will be the main of the body-->
+    <main>
+        <!--This will be the input txt to be able to search a movie by its name-->
+        <div class="movie-search-cont">
+            <input type="text" class="movie-search" placeholder="godfather">
+            <button type="submit" class="search-btn" id="search-btn"><img src="img/Vector.png" alt=""></button>
         </div>
-    </div>
+
+        <!--Modal Login/Signup-->
+        <div d class="modal-login">
+            <img src="img/Group 9.png" alt="cross">
+            <div class="btnTab">
+                <a href="#" class="signup">Signup</a>
+                <a href="#" class="login">Login</a>
+            </div>
+            <form class="register">
+                <input type="text" name="username" placeholder="Username">
+                <input type="password" name="password" placeholder="Password">
+                <div class="remember">
+                    <input type="checkbox" name="remember" id="">
+                    <label for="remember">Remember me</label>
+                </div>    
+            </form>
+            <div class="bottom">
+                <button class="register_btn" type="submit">Login</button>
+                <div class="signup">
+                    <a href="#">I forgot my password</a>
+                    <p>Not a member yer ? <a href="#">Sign up</a></p>
+                </div>
+    
+            </div>
+        </div>
+    </main>
+    <!--This is after the end of the main-->
+    <!--This will be the footer of the body-->
+    <footer>
+        <div class="footer-cont">
+            <a id="logo" href="#"><span id="be-red">be</span>movies</a>
+            <nav id="foot-nav">
+                <ul>
+                    <li id="li-menu" href="search">SEARCH</li>
+                    <li id="li-menu" href="latest">LATEST</li>
+                    <li id="li-menu" href="genres">GENRES</li>
+                    <li id="li-menu">REGISTER</li>
+                    <li id="li-menu">SIGNIN</li>
+                </ul>
+            </nav>
+            <p id="copyright">&#169;2023 - All rights reserved</p>
+        </div>
+    </footer>
+    <!--This is after the end of the footer-->
+    <script src="app.js"></script>
 </body>
 </html>
