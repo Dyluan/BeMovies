@@ -98,16 +98,53 @@ a {
     padding: 13px;
     margin-left: -4px;
 }
-.textResults {
+.textResults, .textReleases{
     font-family: 'Inter';
     font-weight: 400;
     line-height: 19.36px;
     color: white;
+    margin-bottom: 10px;
 }
-.movies {
+.movies, .latestReleases{
     height: 351px;
+    margin-bottom: 95px;
 }
-.movies img {
+.movies img, .latestReleases img {
     height: 100%;
     margin-right: 19px;
+}
+.movies img :hover {
+    
+}
+.genresContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.genresTitle {
+    font-family: 'Inter';
+    font-weight: 400;
+    line-height: 19.36px;
+    color: white;
+    margin-bottom: 46px;
+}
+.genres a {
+    margin-right: 45px;
+    margin-bottom: 26px;
+}
+.genres a:hover, .genres a:visited {
+    background-color: #CC0000;
+    border-radius: 8px;
+    padding: 7px;
+    margin-right: 31px;
+}
+.genres a:last-child {
+    margin-right: 0;
+}
+.genresLine {
+    background-color: white;
+    height: 1px;
+    width: 100%;
+    margin-bottom: 29px;
+    margin-top: 26px;
 }
