@@ -143,6 +143,12 @@ body main .modal-login .btnTab {
   letter-spacing: 0.03em;
   margin-bottom: 55px;
   gap: 3.75rem;
+  /*.signup-btn{
+
+  }
+  .login{
+
+  }*/
 }
 body main .modal-login .register {
   width: 288px;
