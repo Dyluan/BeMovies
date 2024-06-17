@@ -33,27 +33,26 @@
 
         <!--Modal Login/Signup-->
         <div d class="modal-login">
-            <img src="img/Group 9.png" alt="cross">
+            <img src="img/Group 9.png" alt="cross" id="close-btn-modal">
             <div class="btnTab">
-                <a href="#" class="signup">Signup</a>
+                <a href="#" class="signup-btn">Signup</a>
                 <a href="#" class="login">Login</a>
             </div>
             <form class="register">
-                <input type="text" name="username" placeholder="Username">
-                <input type="password" name="password" placeholder="Password">
+                <input type="text" name="username" placeholder="Username" id="username">
+                <input type="password" name="password" placeholder="Password" id="password">
                 <div class="remember">
                     <input type="checkbox" name="remember" id="">
                     <label for="remember">Remember me</label>
                 </div>    
-            </form>
-            <div class="bottom">
+                <div class="bottom">
                 <button class="register_btn" type="submit">Login</button>
                 <div class="signup">
                     <a href="#">I forgot my password</a>
-                    <p>Not a member yer ? <a href="#">Sign up</a></p>
+                    <p>Not a member yet ? <a href="#">Sign up</a></p>
                 </div>
-    
             </div>
+            </form>
         </div>
     </main>
     <!--This is after the end of the main-->
@@ -70,8 +69,7 @@
                     <li id="li-menu">SIGNIN</li>
                 </ul>
             </nav>
-            <p id="copyright">&#169;2023 - All rights reservede</p>
-        </div>
+            <p id="copyright">&#169;2023 - All rights reserved</p>
     </footer>
     <!--This is after the end of the footer-->
     <script src="app.js"></script>
