@@ -206,7 +206,8 @@ a {
     background-color: #141517;
 }
 .registerContainer {
-    /* the display needs to be toggled in order to make the login form appear */
+    /* the display needs to be toggled in order to make the login form appear. 
+    Change the visibility from collapse to visible; then back to collapse to close */
     visibility: collapse;
 
     width: 410px;
@@ -316,4 +317,11 @@ a {
 }
 .mmSign {
     color: #CC0000;
+}
+/* the close button is placed approximatively correctly using UGLY UGLY margins */
+.closeButton {
+    width: 100%;
+    position: relative;
+    margin-left: -90px;
+    margin-top: 11px;
 }
