@@ -15,16 +15,33 @@
                 <span class="be">BE</span>MOVIES
             </div>
             <div class="headerNav">
-                <a href="">Search</a>
-                <a href="">Latest</a>
-                <a href="">Genres</a>
+                <a href="#searchField">Search</a>
+                <a href="#latest">Latest</a>
+                <a href="#genres">Genres</a>
                 <a href="">Register</a>
                 <a href="">Login</a>
             </div>
         </div>
     </div>
     <div class="mainPage">
-        <div class="searchField">
+        <div class="registerContainer" id="register">
+            <div class="signup">
+                <button class="signButton">SIGNUP</button>
+                <button class="loginButton">LOGIN</button>
+            </div>
+            <input type="text" placeholder="Username" class="username"/>
+            <input type="text" placeholder="Password" class="password"/>
+            <div class="stayConnected">
+                <input type="checkbox" name="rememberMe" id="rememberMe" /> <div class="rememberME">Remember me</div>
+            </div>
+            <button class="trueLogin">LOGIN</button>
+            <div class="passwordForgotten"><a href="">I forgot my Password</a></div>
+            <div class="membership">Not a member yet?
+                <div class="mmSign">Sign up</div>
+            </div>
+
+        </div>
+        <div class="searchField" id="searchField">
             <input type="search" name="searchField" id="searchField" placeholder="film name"/>
             <a href=""><img src="./images/arrow.png" alt="arrow" /></a>
         </div>
@@ -37,7 +54,7 @@
                 <img src="./images/parrain2.jpg" alt="un film de merde">
             </div>
         </div>
-        <div class="releases">
+        <div class="releases" id="latest">
             <div class="textReleases">Latest releases</div>
             <div class="latestReleases">
                 <img src="./images/parrain.jpg" alt="un bon film">
@@ -46,7 +63,7 @@
                 <img src="./images/parrain2.jpg" alt="un film de merde">
             </div>
         </div>
-        <div class="genresContainer">
+        <div class="genresContainer" id="genres">
             <div class="genresTitle">Movies by genre</div>
             <div class="genres">
                 <a href="">Comedy</a>
@@ -74,9 +91,9 @@
                 <span class="be">BE</span>MOVIES
             </div>
             <div class="footerNav">
-                <a href="">SEARCH</a>
-                <a href="">LATEST</a>
-                <a href="">GENRES</a>
+                <a href="#searchField">SEARCH</a>
+                <a href="#latest">LATEST</a>
+                <a href="#genres">GENRES</a>
                 <a href="">REGISTER</a>
                 <a href="">SIGNIN</a>
             </div>

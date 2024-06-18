@@ -26,14 +26,11 @@ img {
 }
 
 body {
-    /* width: 1440px; */
-    width: 100%;
+    width: 100vw;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    /* padding-left: 180px;
-    padding-right: 180px; */
     background-color: #191B20;
 }
 .header {
@@ -120,6 +117,11 @@ a {
     height: 100%;
     margin-right: 19px;
 }
+.movies img:last-child,
+.latestReleases img:last-child,
+.genresMovies img:last-child {
+    margin-right: 0;
+}
 .movies img :hover {
     
 }
@@ -202,4 +204,116 @@ a {
     justify-content: center;
     align-items: center;
     background-color: #141517;
+}
+.registerContainer {
+    /* the display needs to be toggled in order to make the login form appear */
+    visibility: collapse;
+
+    width: 410px;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-left: 61px;
+    padding-right: 61px;
+}
+.signup {
+    margin-top: 60px;
+    margin-bottom: 64px;
+    /* border: 2px solid white; */
+    border-radius: 8px;
+}
+.signup button{
+    text-decoration: none;
+    color: white;
+    font-family: 'Inria Sans';
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28.78px;
+    height: 100%;
+    width: auto;
+}
+.signButton {
+    background-color: black;
+    border-radius: 8px 0 0 8px;
+    padding: 12px;
+    padding-left: 32px;
+    padding-right: 26px;
+
+    border: 2px solid white;
+    border-right: hidden;
+}
+.loginButton {
+    border-radius: 0 8px 8px 0;
+    background-color: #CC0000;
+    padding: 12px;
+    padding-left: 26px;
+    padding-right: 32px;
+    border: none;
+}
+.username,
+.password {
+    border-radius: 8px;
+    margin-bottom: 25px;
+    padding: 10px;
+    width: 100%;
+}
+.stayConnected {
+    color: white;
+    font-size: 16px;
+    font-family: 'Inter';
+    font-weight: 400;
+    width: 100%;
+    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 46px;
+}
+.stayConnected input {
+    height: 18px;
+    width: 18px;
+    margin-right: 9px;
+}
+.trueLogin {
+    height: 47px;
+    font-size: 24px;
+    color: white;
+    background-color: #CC0000;
+    border-radius: 8px;
+    font-family: 'Inria Sans';
+    font-weight: 700;
+    border: none;
+    width: 100%;
+    padding: 10px 0 10px 0;
+    margin-bottom: 30px;
+}
+.passwordForgotten {
+    width: 100%;
+    margin-bottom: 19px;
+}
+.passwordForgotten a{
+    font-size: 16px;
+    font-family: 'Inter';
+    font-weight: 400;
+    line-height: 19.36px;
+    color: #CC0000;
+}
+.membership {
+    color: white;
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    font-family: 'Inter';
+    font-weight: 400;
+    line-height: 19.36px;
+    margin-bottom: 100px;
+}
+.mmSign {
+    color: #CC0000;
 }
