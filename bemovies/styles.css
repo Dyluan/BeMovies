@@ -44,9 +44,12 @@ body {
     justify-content: center;
     width: 100vw;
     height: 100px;
+
+    padding-left: 182px;
+    padding-right: 182px;
 }
 .headerInsideContainer {
-    width: 1080px;
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -80,6 +83,8 @@ a {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-left: 182px;
+    padding-right: 182px;
 }
 .searchField {
     margin-top: 73px;
@@ -102,6 +107,9 @@ a {
     padding: 13px;
     margin-left: -4px;
 }
+.results {
+    margin-bottom: 95px;
+}
 .textResults, .textReleases{
     font-family: 'Inter';
     font-weight: 400;
@@ -122,8 +130,86 @@ a {
 .genresMovies img:last-child {
     margin-right: 0;
 }
-.movies img :hover {
-    
+
+.moviesTest {
+    height: 351px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.imgContainer {
+    position: relative;
+    margin-right: 19px;
+}
+.imgContainer img {
+    display: block;
+    height: 100%;
+}
+.imgContainer {
+    height: 351px;
+    max-width: 247px;
+}
+.imgOverlay {
+    position: absolute;
+
+    height: 351px;
+    width: 247.17px;
+
+    bottom: 0;
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.5); /* Black see-through */
+    transition: .5s ease;
+    opacity:0;
+    color: white;
+    font-size: 20px;
+    padding: 20px;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    font-family: 'Inter';
+    font-weight: 700;
+    font-size: 20px;
+}
+.overlayTitle {
+    margin-top: 76px;
+    margin-bottom: 23px;
+}
+.overlayYear {
+    color: #B0B0B0;
+    line-height: 24.2px;
+    margin-bottom: 23px;
+}
+.overlayRanking img {
+    display: flex;
+    align-items: center;
+    width: 35px;
+    height: auto;
+    margin-bottom: 9px;
+}
+.overlayGenre {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16.94px;
+    margin-bottom: 41px;
+}
+.rankingImgContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.overlayNote {
+    color: #CC0000;
+    font-size: 32px;
+    line-height: 38px;
+}
+.imgContainer:hover .imgOverlay {
+    opacity: 1;
 }
 .genresContainer {
     display: flex;
@@ -171,7 +257,7 @@ a {
 .footer {
     
     display: flex;
-    width: 1080px;
+    width: 100%;
     font-family: 'Inria Sans';
     font-weight: 700;
     text-transform: capitalize;
@@ -179,7 +265,7 @@ a {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 .footerTitle {
     line-height: 43.16px;
@@ -204,6 +290,9 @@ a {
     justify-content: center;
     align-items: center;
     background-color: #141517;
+
+    padding-left: 182px;
+    padding-right: 182px;
 }
 .registerContainer {
     /* the display needs to be toggled in order to make the login form appear. 
@@ -259,6 +348,7 @@ a {
     margin-bottom: 25px;
     padding: 10px;
     width: 100%;
+    border: none;
 }
 .stayConnected {
     color: white;

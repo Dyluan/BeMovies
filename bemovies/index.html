@@ -9,6 +9,7 @@
     
 </head>
 <body>
+    <!-- this is the header. Nothing much to say there -->
     <div class="header">
         <div class="headerInsideContainer">
             <div class="headerTitle">
@@ -23,7 +24,9 @@
             </div>
         </div>
     </div>
+    <!-- mainPage is the container for the rest of the page; except the footer -->
     <div class="mainPage">
+        <!-- registerContainer actually contains the form that pops up when you click LOGIN -->
         <div class="registerContainer" id="register">
             <div class="closeButton">
                 <img src="./images/close.png" alt="closeButton">
@@ -35,7 +38,8 @@
             <input type="text" placeholder="Username" class="username"/>
             <input type="text" placeholder="Password" class="password"/>
             <div class="stayConnected">
-                <input type="checkbox" name="rememberMe" id="rememberMe" /> <div class="rememberME">Remember me</div>
+                <input type="checkbox" name="rememberMe" id="rememberMe" /> 
+                <div class="rememberME">Remember me</div>
             </div>
             <button class="trueLogin">LOGIN</button>
             <div class="passwordForgotten"><a href="">I forgot my Password</a></div>
@@ -50,11 +54,65 @@
         </div>
         <div class="results">
             <div class="textResults">Results for </div>
-            <div class="movies">
-                <img src="./images/parrain.jpg" alt="un bon film">
-                <img src="./images/parrain2.jpg" alt="un film de merde">
-                <img src="./images/parrain.jpg" alt="un bon film">
-                <img src="./images/parrain2.jpg" alt="un film de merde">
+            <div class="moviesTest">
+                <div class="imgContainer">
+                    <img src="./images/parrain.jpg" alt="un bon film">
+                    <div class="imgOverlay">
+                        <div class="overlayTitle">The Godfather part 3</div>
+                        <div class="overlayYear">1990</div>
+                        <div class="overlayGenre">Crime/Drama/Thriller</div>
+                        <div class="overlayRanking">
+                            <div class="rankingImgContainer">
+                                <img src="./images/star.png" alt="star">
+                            </div>
+                            
+                            <div class="overlayNote">7.4</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="imgContainer">
+                    <img src="./images/parrain2.jpg" alt="un bon film">
+                    <div class="imgOverlay">
+                        <div class="overlayTitle">The Godfather part 3</div>
+                        <div class="overlayYear">1990</div>
+                        <div class="overlayGenre">Crime/Drama/Thriller</div>
+                        <div class="overlayRanking">
+                            <div class="rankingImgContainer">
+                                <img src="./images/star.png" alt="un film de merde">
+                            </div>
+                            <div class="overlayNote">7.4</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="imgContainer">
+                    <img src="./images/parrain.jpg" alt="un bon film">
+                    <div class="imgOverlay">
+                        <div class="overlayTitle">The Godfather part 3</div>
+                        <div class="overlayYear">1990</div>
+                        <div class="overlayGenre">Crime/Drama/Thriller</div>
+                        <div class="overlayRanking">
+                            <div class="rankingImgContainer">
+                                <img src="./images/star.png" alt="star">
+                            </div>
+                            
+                            <div class="overlayNote">7.4</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="imgContainer">
+                    <img src="./images/parrain2.jpg" alt="un bon film">
+                    <div class="imgOverlay">
+                        <div class="overlayTitle">The Godfather part 3</div>
+                        <div class="overlayYear">1990</div>
+                        <div class="overlayGenre">Crime/Drama/Thriller</div>
+                        <div class="overlayRanking">
+                            <div class="rankingImgContainer">
+                                <img src="./images/star.png" alt="un film de merde">
+                            </div>
+                            <div class="overlayNote">7.4</div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="releases" id="latest">
@@ -75,8 +133,9 @@
                 <a href="">Romance</a>
                 <a href="">Fantasy</a>
                 <a href="">Animation</a>
+                <div class="genresLine"></div>
             </div>
-            <div class="genresLine"></div>
+            
             <div class="genresSubtitleContainer">
                 <div class="genresSubtitle">Comedy</div>
             </div>
@@ -88,6 +147,7 @@
             </div>
         </div>
     </div>
+    <!-- footer! Nothing much to say except that REGISTER and SIGNIN buttons might be reversed. -->
     <div class="footerContainer">
         <div class="footer">
             <div class="footerTitle">
