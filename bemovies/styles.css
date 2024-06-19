@@ -107,9 +107,6 @@ a {
     padding: 13px;
     margin-left: -4px;
 }
-.results {
-    margin-bottom: 95px;
-}
 .textResults, .textReleases{
     font-family: 'Inter';
     font-weight: 400;
@@ -117,7 +114,7 @@ a {
     color: white;
     margin-bottom: 10px;
 }
-.textResults {
+.textResults, .textReleases, .genresSubtitle {
     margin-left: 55px;
 }
 .movies, .latestReleases, .genresMovies{
@@ -218,6 +215,7 @@ a {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
 }
 .genresTitle, .genresSubtitle{
     font-family: 'Inter';
@@ -513,7 +511,7 @@ a {
 .swiper-wrapper {
     box-sizing: border-box;
 }
-.resultats {
+.resultats, .releases, .genresMovies {
     width: 100%;
     margin-bottom: 95px;
 }
