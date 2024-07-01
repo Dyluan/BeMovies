@@ -30,7 +30,8 @@
     <!-- mainPage is the container for the rest of the page; except the footer -->
     <div class="mainPage">
         <!-- popupMovie is the modal that pops up when you open click on a film -->
-         <!-- needs some proper css -->
+        <!-- needs some proper css -->
+        <div class="popupWrapper">
         <div class="popupMovie">
             <div class="closePopUp">
                 <img src="./images/close.png" alt="closeButton">
@@ -50,7 +51,8 @@
                 </div>
             </div>
         </div>
-
+        </div>
+        
         <!-- registerContainer contains the form that pops up when you click LOGIN -->
         <div class="registerContainer" id="register">
             <div class="closeButton">
@@ -73,14 +75,14 @@
             </div>
 
         </div>
-        <div class="searchField" id="searchField">
-            <input type="search" name="searchField" id="searchField" placeholder="film name"/>
+        <div class="searchField" >
+            <input type="text" name="searchField" id="searchField" placeholder="film name"/>
             <a href=""><img src="./images/arrow.png" alt="arrow" /></a>
         </div>
 
         <!-- resultats contains the movies searched fetched by the api -->
         <div class="resultats">
-            <div class="textResults">Results for</div>
+            <div class="textResults">Results for "<div class="movieName"></div>"</div>
             <div class="swiper mySwiper">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
@@ -144,15 +146,15 @@
                             </div>
                         </div>
                     </div>
-                <div class="swiper-slide">Slide 2</div>
-                <div class="swiper-slide">Slide 3</div>
-                <div class="swiper-slide">Slide 4</div>
-                <div class="swiper-slide">Slide 5</div>
-                <div class="swiper-slide">Slide 6</div>
-                <div class="swiper-slide">Slide 7</div>
-                <div class="swiper-slide">Slide 8</div>
-                <div class="swiper-slide">Slide 9</div>
-            </div>
+                    <div class="swiper-slide">Slide 2</div>
+                    <div class="swiper-slide">Slide 3</div>
+                    <div class="swiper-slide">Slide 4</div>
+                    <div class="swiper-slide">Slide 5</div>
+                    <div class="swiper-slide">Slide 6</div>
+                    <div class="swiper-slide">Slide 7</div>
+                    <div class="swiper-slide">Slide 8</div>
+                    <div class="swiper-slide">Slide 9</div>
+                </div>
                 <div class="swiper-button-next"></div>
                 <div class="swiper-button-prev"></div>
             </div> 
@@ -161,10 +163,71 @@
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
 
-        <div class="releases">
+        <div class="releases" id="latest">
             <div class="textReleases">Latest releases</div>
             <div class="swiper mySwiper">
                 <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="moviesTest">
+                                <!-- for the overlay method see https://www.w3schools.com/howto/howto_css_image_overlay_title.asp -->
+                                <div class="imgContainer">
+                                    <img src="./images/parrain.jpg" alt="un bon film">
+                                    <div class="imgOverlay">
+                                        <div class="overlayTitle"></div>
+                                        <div class="overlayYear"></div>
+                                        <div class="overlayGenre"></div>
+                                        <div class="overlayRanking">
+                                            <div class="rankingImgContainer">
+                                                <img src="./images/star.png" alt="star">
+                                            </div>
+                                            <div class="overlayNote"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="imgContainer">
+                                    <img src="./images/parrain.jpg" alt="un bon film">
+                                    <div class="imgOverlay">
+                                        <div class="overlayTitle"></div>
+                                        <div class="overlayYear"></div>
+                                        <div class="overlayGenre"></div>
+                                        <div class="overlayRanking">
+                                            <div class="rankingImgContainer">
+                                                <img src="./images/star.png" alt="star">
+                                            </div>
+                                            <div class="overlayNote"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="imgContainer">
+                                    <img src="./images/parrain.jpg" alt="un bon film">
+                                    <div class="imgOverlay">
+                                        <div class="overlayTitle"></div>
+                                        <div class="overlayYear"></div>
+                                        <div class="overlayGenre"></div>
+                                        <div class="overlayRanking">
+                                            <div class="rankingImgContainer">
+                                                <img src="./images/star.png" alt="star">
+                                            </div>
+                                            <div class="overlayNote"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="imgContainer">
+                                    <img src="./images/parrain.jpg" alt="un bon film">
+                                    <div class="imgOverlay">
+                                        <div class="overlayTitle"></div>
+                                        <div class="overlayYear"></div>
+                                        <div class="overlayGenre"></div>
+                                        <div class="overlayRanking">
+                                            <div class="rankingImgContainer">
+                                                <img src="./images/star.png" alt="star">
+                                            </div>
+                                            <div class="overlayNote"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
                     <div class="swiper-slide">
                         <div class="moviesTest">
                                 <!-- for the overlay method see https://www.w3schools.com/howto/howto_css_image_overlay_title.asp -->
@@ -226,14 +289,189 @@
                                 </div>
                         </div>
                     </div>
-                    <div class="swiper-slide">Slide 2</div>
-                    <div class="swiper-slide">Slide 3</div>
-                    <div class="swiper-slide">Slide 4</div>
-                    <div class="swiper-slide">Slide 5</div>
-                    <div class="swiper-slide">Slide 6</div>
-                    <div class="swiper-slide">Slide 7</div>
-                    <div class="swiper-slide">Slide 8</div>
-                    <div class="swiper-slide">Slide 9</div>
+                    <div class="swiper-slide">
+                        <div class="moviesTest">
+                                <!-- for the overlay method see https://www.w3schools.com/howto/howto_css_image_overlay_title.asp -->
+                                <div class="imgContainer">
+                                    <img src="./images/parrain.jpg" alt="un bon film">
+                                    <div class="imgOverlay">
+                                        <div class="overlayTitle">The Godfather part 3</div>
+                                        <div class="overlayYear">1990</div>
+                                        <div class="overlayGenre">Crime/Drama/Thriller</div>
+                                        <div class="overlayRanking">
+                                            <div class="rankingImgContainer">
+                                                <img src="./images/star.png" alt="star">
+                                            </div>
+                                            <div class="overlayNote">7.4</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="imgContainer">
+                                    <img src="./images/parrain2.jpg" alt="un bon film">
+                                    <div class="imgOverlay">
+                                        <div class="overlayTitle">The Godfather part 3</div>
+                                        <div class="overlayYear">1990</div>
+                                        <div class="overlayGenre">Crime/Drama/Thriller</div>
+                                        <div class="overlayRanking">
+                                            <div class="rankingImgContainer">
+                                                <img src="./images/star.png" alt="un film de merde">
+                                            </div>
+                                            <div class="overlayNote">7.4</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="imgContainer">
+                                    <img src="./images/parrain.jpg" alt="un bon film">
+                                    <div class="imgOverlay">
+                                        <div class="overlayTitle">The Godfather part 3</div>
+                                        <div class="overlayYear">1990</div>
+                                        <div class="overlayGenre">Crime/Drama/Thriller</div>
+                                        <div class="overlayRanking">
+                                            <div class="rankingImgContainer">
+                                                <img src="./images/star.png" alt="star">
+                                            </div>
+                                            <div class="overlayNote">7.4</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="imgContainer">
+                                    <img src="./images/parrain2.jpg" alt="un bon film">
+                                    <div class="imgOverlay">
+                                        <div class="overlayTitle">The Godfather part 3</div>
+                                        <div class="overlayYear">1990</div>
+                                        <div class="overlayGenre">Crime/Drama/Thriller</div>
+                                        <div class="overlayRanking">
+                                            <div class="rankingImgContainer">
+                                                <img src="./images/star.png" alt="un film de merde">
+                                            </div>
+                                            <div class="overlayNote">7.4</div>
+                                        </div>
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="moviesTest">
+                                <!-- for the overlay method see https://www.w3schools.com/howto/howto_css_image_overlay_title.asp -->
+                                <div class="imgContainer">
+                                    <img src="./images/parrain.jpg" alt="un bon film">
+                                    <div class="imgOverlay">
+                                        <div class="overlayTitle">The Godfather part 3</div>
+                                        <div class="overlayYear">1990</div>
+                                        <div class="overlayGenre">Crime/Drama/Thriller</div>
+                                        <div class="overlayRanking">
+                                            <div class="rankingImgContainer">
+                                                <img src="./images/star.png" alt="star">
+                                            </div>
+                                            <div class="overlayNote">7.4</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="imgContainer">
+                                    <img src="./images/parrain2.jpg" alt="un bon film">
+                                    <div class="imgOverlay">
+                                        <div class="overlayTitle">The Godfather part 3</div>
+                                        <div class="overlayYear">1990</div>
+                                        <div class="overlayGenre">Crime/Drama/Thriller</div>
+                                        <div class="overlayRanking">
+                                            <div class="rankingImgContainer">
+                                                <img src="./images/star.png" alt="un film de merde">
+                                            </div>
+                                            <div class="overlayNote">7.4</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="imgContainer">
+                                    <img src="./images/parrain.jpg" alt="un bon film">
+                                    <div class="imgOverlay">
+                                        <div class="overlayTitle">The Godfather part 3</div>
+                                        <div class="overlayYear">1990</div>
+                                        <div class="overlayGenre">Crime/Drama/Thriller</div>
+                                        <div class="overlayRanking">
+                                            <div class="rankingImgContainer">
+                                                <img src="./images/star.png" alt="star">
+                                            </div>
+                                            <div class="overlayNote">7.4</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="imgContainer">
+                                    <img src="./images/parrain2.jpg" alt="un bon film">
+                                    <div class="imgOverlay">
+                                        <div class="overlayTitle">The Godfather part 3</div>
+                                        <div class="overlayYear">1990</div>
+                                        <div class="overlayGenre">Crime/Drama/Thriller</div>
+                                        <div class="overlayRanking">
+                                            <div class="rankingImgContainer">
+                                                <img src="./images/star.png" alt="un film de merde">
+                                            </div>
+                                            <div class="overlayNote">7.4</div>
+                                        </div>
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="moviesTest">
+                                <!-- for the overlay method see https://www.w3schools.com/howto/howto_css_image_overlay_title.asp -->
+                                <div class="imgContainer">
+                                    <img src="./images/parrain.jpg" alt="un bon film">
+                                    <div class="imgOverlay">
+                                        <div class="overlayTitle">The Godfather part 3</div>
+                                        <div class="overlayYear">1990</div>
+                                        <div class="overlayGenre">Crime/Drama/Thriller</div>
+                                        <div class="overlayRanking">
+                                            <div class="rankingImgContainer">
+                                                <img src="./images/star.png" alt="star">
+                                            </div>
+                                            <div class="overlayNote">7.4</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="imgContainer">
+                                    <img src="./images/parrain2.jpg" alt="un bon film">
+                                    <div class="imgOverlay">
+                                        <div class="overlayTitle">The Godfather part 3</div>
+                                        <div class="overlayYear">1990</div>
+                                        <div class="overlayGenre">Crime/Drama/Thriller</div>
+                                        <div class="overlayRanking">
+                                            <div class="rankingImgContainer">
+                                                <img src="./images/star.png" alt="un film de merde">
+                                            </div>
+                                            <div class="overlayNote">7.4</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="imgContainer">
+                                    <img src="./images/parrain.jpg" alt="un bon film">
+                                    <div class="imgOverlay">
+                                        <div class="overlayTitle">The Godfather part 3</div>
+                                        <div class="overlayYear">1990</div>
+                                        <div class="overlayGenre">Crime/Drama/Thriller</div>
+                                        <div class="overlayRanking">
+                                            <div class="rankingImgContainer">
+                                                <img src="./images/star.png" alt="star">
+                                            </div>
+                                            <div class="overlayNote">7.4</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="imgContainer">
+                                    <img src="./images/parrain2.jpg" alt="un bon film">
+                                    <div class="imgOverlay">
+                                        <div class="overlayTitle">The Godfather part 3</div>
+                                        <div class="overlayYear">1990</div>
+                                        <div class="overlayGenre">Crime/Drama/Thriller</div>
+                                        <div class="overlayRanking">
+                                            <div class="rankingImgContainer">
+                                                <img src="./images/star.png" alt="un film de merde">
+                                            </div>
+                                            <div class="overlayNote">7.4</div>
+                                        </div>
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="swiper-button-next"></div>
                 <div class="swiper-button-prev"></div>
@@ -245,12 +483,12 @@
         <div class="genresContainer" id="genres">
             <div class="genresTitle">Movies by genre</div>
             <div class="genres">
-                <a href="">Comedy</a>
-                <a href="">Drama</a>
-                <a href="">Action</a>
-                <a href="">Romance</a>
-                <a href="">Fantasy</a>
-                <a href="">Animation</a>
+                <a href="" onclick="return false" class="35">Comedy</a>
+                <a href="" onclick="return false" class="18">Drama</a>
+                <a href="" onclick="return false" class="28">Action</a>
+                <a href="" onclick="return false" class="10749">Romance</a>
+                <a href="" onclick="return false" class="14">Fantasy</a>
+                <a href="" onclick="return false" class="16">Animation</a>
                 <div class="genresLine"></div>
             </div>
             
@@ -263,9 +501,70 @@
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
                             <div class="moviesTest">
-                                <!-- for the overlay method see https://www.w3schools.com/howto/howto_css_image_overlay_title.asp -->
-                                <div class="imgContainer">
-                                    <img src="./images/parrain.jpg" alt="un bon film">
+                                    <!-- for the overlay method see https://www.w3schools.com/howto/howto_css_image_overlay_title.asp -->
+                                    <div class="imgContainer">
+                                        <img src="./images/parrain.jpg" alt="un bon film">
+                                        <div class="imgOverlay">
+                                            <div class="overlayTitle"></div>
+                                            <div class="overlayYear"></div>
+                                            <div class="overlayGenre"></div>
+                                            <div class="overlayRanking">
+                                                <div class="rankingImgContainer">
+                                                    <img src="./images/star.png" alt="star">
+                                                </div>
+                                                <div class="overlayNote"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="imgContainer">
+                                        <img src="./images/parrain.jpg" alt="un bon film">
+                                        <div class="imgOverlay">
+                                            <div class="overlayTitle"></div>
+                                            <div class="overlayYear"></div>
+                                            <div class="overlayGenre"></div>
+                                            <div class="overlayRanking">
+                                                <div class="rankingImgContainer">
+                                                    <img src="./images/star.png" alt="star">
+                                                </div>
+                                                <div class="overlayNote"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="imgContainer">
+                                        <img src="./images/parrain.jpg" alt="un bon film">
+                                        <div class="imgOverlay">
+                                            <div class="overlayTitle"></div>
+                                            <div class="overlayYear"></div>
+                                            <div class="overlayGenre"></div>
+                                            <div class="overlayRanking">
+                                                <div class="rankingImgContainer">
+                                                    <img src="./images/star.png" alt="star">
+                                                </div>
+                                                <div class="overlayNote"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="imgContainer">
+                                        <img src="./images/parrain.jpg" alt="un bon film">
+                                        <div class="imgOverlay">
+                                            <div class="overlayTitle"></div>
+                                            <div class="overlayYear"></div>
+                                            <div class="overlayGenre"></div>
+                                            <div class="overlayRanking">
+                                                <div class="rankingImgContainer">
+                                                    <img src="./images/star.png" alt="star">
+                                                </div>
+                                                <div class="overlayNote"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="moviesTest">
+                                    <!-- for the overlay method see https://www.w3schools.com/howto/howto_css_image_overlay_title.asp -->
+                                    <div class="imgContainer">
+                                        <img src="./images/parrain.jpg" alt="un bon film">
                                         <div class="imgOverlay">
                                             <div class="overlayTitle">The Godfather part 3</div>
                                             <div class="overlayYear">1990</div>
@@ -320,21 +619,195 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div>
                             </div>
-                        <div class="swiper-slide">Slide 2</div>
-                        <div class="swiper-slide">Slide 3</div>
-                        <div class="swiper-slide">Slide 4</div>
-                        <div class="swiper-slide">Slide 5</div>
-                        <div class="swiper-slide">Slide 6</div>
-                        <div class="swiper-slide">Slide 7</div>
-                        <div class="swiper-slide">Slide 8</div>
-                        <div class="swiper-slide">Slide 9</div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="moviesTest">
+                                    <!-- for the overlay method see https://www.w3schools.com/howto/howto_css_image_overlay_title.asp -->
+                                    <div class="imgContainer">
+                                        <img src="./images/parrain.jpg" alt="un bon film">
+                                        <div class="imgOverlay">
+                                            <div class="overlayTitle">The Godfather part 3</div>
+                                            <div class="overlayYear">1990</div>
+                                            <div class="overlayGenre">Crime/Drama/Thriller</div>
+                                            <div class="overlayRanking">
+                                                <div class="rankingImgContainer">
+                                                    <img src="./images/star.png" alt="star">
+                                                </div>
+                                                <div class="overlayNote">7.4</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="imgContainer">
+                                        <img src="./images/parrain2.jpg" alt="un bon film">
+                                        <div class="imgOverlay">
+                                            <div class="overlayTitle">The Godfather part 3</div>
+                                            <div class="overlayYear">1990</div>
+                                            <div class="overlayGenre">Crime/Drama/Thriller</div>
+                                            <div class="overlayRanking">
+                                                <div class="rankingImgContainer">
+                                                    <img src="./images/star.png" alt="un film de merde">
+                                                </div>
+                                                <div class="overlayNote">7.4</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="imgContainer">
+                                        <img src="./images/parrain.jpg" alt="un bon film">
+                                        <div class="imgOverlay">
+                                            <div class="overlayTitle">The Godfather part 3</div>
+                                            <div class="overlayYear">1990</div>
+                                            <div class="overlayGenre">Crime/Drama/Thriller</div>
+                                            <div class="overlayRanking">
+                                                <div class="rankingImgContainer">
+                                                    <img src="./images/star.png" alt="star">
+                                                </div>
+                                                <div class="overlayNote">7.4</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="imgContainer">
+                                        <img src="./images/parrain2.jpg" alt="un bon film">
+                                        <div class="imgOverlay">
+                                            <div class="overlayTitle">The Godfather part 3</div>
+                                            <div class="overlayYear">1990</div>
+                                            <div class="overlayGenre">Crime/Drama/Thriller</div>
+                                            <div class="overlayRanking">
+                                                <div class="rankingImgContainer">
+                                                    <img src="./images/star.png" alt="un film de merde">
+                                                </div>
+                                                <div class="overlayNote">7.4</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="moviesTest">
+                                    <!-- for the overlay method see https://www.w3schools.com/howto/howto_css_image_overlay_title.asp -->
+                                    <div class="imgContainer">
+                                        <img src="./images/parrain.jpg" alt="un bon film">
+                                        <div class="imgOverlay">
+                                            <div class="overlayTitle">The Godfather part 3</div>
+                                            <div class="overlayYear">1990</div>
+                                            <div class="overlayGenre">Crime/Drama/Thriller</div>
+                                            <div class="overlayRanking">
+                                                <div class="rankingImgContainer">
+                                                    <img src="./images/star.png" alt="star">
+                                                </div>
+                                                <div class="overlayNote">7.4</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="imgContainer">
+                                        <img src="./images/parrain2.jpg" alt="un bon film">
+                                        <div class="imgOverlay">
+                                            <div class="overlayTitle">The Godfather part 3</div>
+                                            <div class="overlayYear">1990</div>
+                                            <div class="overlayGenre">Crime/Drama/Thriller</div>
+                                            <div class="overlayRanking">
+                                                <div class="rankingImgContainer">
+                                                    <img src="./images/star.png" alt="un film de merde">
+                                                </div>
+                                                <div class="overlayNote">7.4</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="imgContainer">
+                                        <img src="./images/parrain.jpg" alt="un bon film">
+                                        <div class="imgOverlay">
+                                            <div class="overlayTitle">The Godfather part 3</div>
+                                            <div class="overlayYear">1990</div>
+                                            <div class="overlayGenre">Crime/Drama/Thriller</div>
+                                            <div class="overlayRanking">
+                                                <div class="rankingImgContainer">
+                                                    <img src="./images/star.png" alt="star">
+                                                </div>
+                                                <div class="overlayNote">7.4</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="imgContainer">
+                                        <img src="./images/parrain2.jpg" alt="un bon film">
+                                        <div class="imgOverlay">
+                                            <div class="overlayTitle">The Godfather part 3</div>
+                                            <div class="overlayYear">1990</div>
+                                            <div class="overlayGenre">Crime/Drama/Thriller</div>
+                                            <div class="overlayRanking">
+                                                <div class="rankingImgContainer">
+                                                    <img src="./images/star.png" alt="un film de merde">
+                                                </div>
+                                                <div class="overlayNote">7.4</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="moviesTest">
+                                    <!-- for the overlay method see https://www.w3schools.com/howto/howto_css_image_overlay_title.asp -->
+                                    <div class="imgContainer">
+                                        <img src="./images/parrain.jpg" alt="un bon film">
+                                        <div class="imgOverlay">
+                                            <div class="overlayTitle">The Godfather part 3</div>
+                                            <div class="overlayYear">1990</div>
+                                            <div class="overlayGenre">Crime/Drama/Thriller</div>
+                                            <div class="overlayRanking">
+                                                <div class="rankingImgContainer">
+                                                    <img src="./images/star.png" alt="star">
+                                                </div>
+                                                <div class="overlayNote">7.4</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="imgContainer">
+                                        <img src="./images/parrain2.jpg" alt="un bon film">
+                                        <div class="imgOverlay">
+                                            <div class="overlayTitle">The Godfather part 3</div>
+                                            <div class="overlayYear">1990</div>
+                                            <div class="overlayGenre">Crime/Drama/Thriller</div>
+                                            <div class="overlayRanking">
+                                                <div class="rankingImgContainer">
+                                                    <img src="./images/star.png" alt="un film de merde">
+                                                </div>
+                                                <div class="overlayNote">7.4</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="imgContainer">
+                                        <img src="./images/parrain.jpg" alt="un bon film">
+                                        <div class="imgOverlay">
+                                            <div class="overlayTitle">The Godfather part 3</div>
+                                            <div class="overlayYear">1990</div>
+                                            <div class="overlayGenre">Crime/Drama/Thriller</div>
+                                            <div class="overlayRanking">
+                                                <div class="rankingImgContainer">
+                                                    <img src="./images/star.png" alt="star">
+                                                </div>
+                                                <div class="overlayNote">7.4</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="imgContainer">
+                                        <img src="./images/parrain2.jpg" alt="un bon film">
+                                        <div class="imgOverlay">
+                                            <div class="overlayTitle">The Godfather part 3</div>
+                                            <div class="overlayYear">1990</div>
+                                            <div class="overlayGenre">Crime/Drama/Thriller</div>
+                                            <div class="overlayRanking">
+                                                <div class="rankingImgContainer">
+                                                    <img src="./images/star.png" alt="un film de merde">
+                                                </div>
+                                                <div class="overlayNote">7.4</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                            </div>
+                        </div>
                     </div>
-                        <div class="swiper-button-next"></div>
-                        <div class="swiper-button-prev"></div>
-                    </div> 
-                </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div> 
             </div>
             <!-- swiper js -->
             <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
